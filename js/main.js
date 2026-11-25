@@ -29,6 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   activarPlaceholders();
 
+  /* En celular: título del hero y botones de antojo en una sola línea.
+     Baja el tamaño de letra de 1 en 1 px solo hasta que quepan. */
+  const movil = window.matchMedia('(max-width: 900px)');
+  function unaLinea(el, minimo) {
+    if (!el) return;
+    el.style.fontSize = '';
+    if (!movil.matches) return;
+    let tam = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > el.clientWidth + 1 && tam > minimo) {
+      tam -= 1;
+      el.style.fontSize = tam + 'px';
+    }
+  }
+  function ajustar() {
+    unaLinea(document.querySelector('.hero__title'), 22);
+    unaLinea(document.querySelector('.tabs'), 13);
+  }
+  ajustar();
+  if (document.fonts) document.fonts.ready.then(ajustar);
+  window.addEventListener('resize', ajustar);
+
 
   /* ---------- 1. Menú desplegable (botón de 3 líneas) ---------- */
   const burger = document.getElementById('burger');

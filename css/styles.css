@@ -980,20 +980,31 @@ body.has-cart-bar .toast { bottom: 108px; }
   .card__desc { font-size: 12px; line-height: 1.3; }
   .card__price { font-size: 17px; }
 
-  /* Composición Refreshers como el prototipo: texto lleno detrás de los vasos
-     y "Refresca tu día" + botón debajo */
-  .refreshers { margin-top: 56px; padding: 0; }
+  /* Título del hero y botones de antojo en una sola línea
+     (js/main.js baja el tamaño solo lo necesario para que quepan) */
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .hero__title { font-size: 34px; white-space: nowrap; }
+  .tabs { flex-wrap: nowrap; justify-content: center; gap: 8px; font-size: 18px; width: 100%; }
+  .tab { font-size: 1em; height: 2.6em; min-width: 0; padding: 0 .95em; white-space: nowrap; flex: 0 1 auto; }
+
+  /* Composición Refreshers: el texto rosa llena toda la sección (renglones completos,
+     repartidos de arriba a abajo) y "Refresca tu día" + botón quedan encima, al final */
+  .refreshers { margin-top: 56px; padding: 0 0 28px; }
   .refreshers__words {
-    bottom: auto;
-    height: calc((100vw - 2 * var(--gutter)) * 583 / 430);
-    justify-content: flex-start;
+    inset: 0;
+    height: auto;
+    justify-content: space-between;
     overflow: hidden;
   }
   .refreshers__words span,
-  .refreshers__words span:nth-child(n+5) { display: block; font-size: 82px; line-height: .9; }
+  .refreshers__words span:nth-child(n+5) { display: block; font-size: 76px; line-height: .9; }
   .refreshers__words span:nth-child(odd) { transform: translateX(-10px); }
   .refreshers__words span:nth-child(even) { transform: translateX(-150px); }
-  .refreshers__inner { row-gap: 20px; }
+  .refreshers__inner { row-gap: 12px; }
   .refreshers__img { width: 100%; }
-  .refreshers__cta { gap: 14px; padding-bottom: 8px; }
+  .refreshers__cta { gap: 14px; padding: 0; }
+
+  /* Menos blanco entre Refreshers y "Cerca de ti" */
+  .locations-section { padding-top: 16px; }
+}
 }

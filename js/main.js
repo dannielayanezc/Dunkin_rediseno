@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const productos = {
     bebidas: [
       { nombre: 'Café del día',     desc: 'Frío, con leche y hielo',        precio: 75, img: 'img/cafe_land.jpg',   alt: 'Café helado' },
-      { nombre: 'Mango Refresher',  desc: 'Mango y piña con hielo · M',     precio: 69, img: 'img/rfrshr_land.jpg', alt: 'Mango Refresher con hielo' }
+      { nombre: 'Mango Refresher',  desc: 'Mango y piña con hielo\u00a0·\u00a0M',     precio: 69, img: 'img/rfrshr_land.jpg', alt: 'Mango Refresher con hielo' }
     ],
     donas: [
       { nombre: 'Strawberry Rainbow', desc: 'Glaseado de fresa con chispas', precio: 29, img: 'img/dona_rainbow.jpg',   alt: 'Dona glaseada rosa con chispas de colores', contain: true },

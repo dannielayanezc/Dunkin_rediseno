@@ -460,6 +460,7 @@ button { font: inherit; }
   color: var(--pink-soft);
 }
 .refreshers__words span:nth-child(even) { transform: translateX(-280px); }
+.refreshers__words span:nth-child(n+5) { display: none; }   /* renglones extra: solo en celular */
 
 .refreshers__inner {
   position: relative;
@@ -941,4 +942,56 @@ body.has-cart-bar .toast { bottom: 108px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+}
+
+
+/* =========================================================
+   Ajustes para celular (revisión en iPhone)
+   ========================================================= */
+@media (max-width: 900px) {
+  /* Fondo café debajo del footer: el espacio extra se ve como parte del footer */
+  html { background: var(--brown); }
+  body { background: var(--white); }
+  .footer { padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px)); }
+
+  /* Hero: botones del mismo tamaño y en una sola línea */
+  .hero { gap: 12px; padding: 40px 20px; }
+  .hero__text { font-size: 17px; line-height: 1.35; }
+  .hero__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .hero .btn--xl { width: 100%; height: 52px; padding: 0 8px; font-size: 20px; white-space: nowrap; }
+
+  /* Títulos y párrafos más pegados */
+  .feature__side { gap: 12px; }
+  .feature__text { margin-top: -2px; }
+  .tabs { margin-top: 6px; }
+  .link-more { margin-top: 4px; }
+  .locations__panel { gap: 14px; }
+
+  /* Tarjetas: textos del mismo tamaño para que no se desfasen */
+  .card__title { font-size: 17px; line-height: 1.05; }
+  .card__desc { font-size: 12px; line-height: 1.3; }
+  .card__price { font-size: 17px; }
+
+  /* Composición Refreshers como el prototipo: texto lleno detrás de los vasos
+     y "Refresca tu día" + botón debajo */
+  .refreshers { margin-top: 56px; padding: 0; }
+  .refreshers__words {
+    bottom: auto;
+    height: calc((100vw - 2 * var(--gutter)) * 583 / 430);
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .refreshers__words span,
+  .refreshers__words span:nth-child(n+5) { display: block; font-size: 82px; line-height: .9; }
+  .refreshers__words span:nth-child(odd) { transform: translateX(-10px); }
+  .refreshers__words span:nth-child(even) { transform: translateX(-150px); }
+  .refreshers__inner { row-gap: 20px; }
+  .refreshers__img { width: 100%; }
+  .refreshers__cta { gap: 14px; padding-bottom: 8px; }
 }

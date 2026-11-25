@@ -162,6 +162,14 @@
   .page--sandwiches .bev-head .seg { margin: 0 20px; }
   .seg__btn { height: 40px; padding: 0 14px; font-size: 14px; }
 
+  /* La caja "Sándwiches" queda unida a su curva; el interruptor va debajo */
+  .page--sandwiches .sw-section { display: flex; flex-direction: column; }
+  .page--sandwiches .sw-section .bev-head--left { display: contents; }
+  .page--sandwiches .sw-section .bev-pill--left { order: 1; }
+  .page--sandwiches .sw-section .bev-conector-sin { order: 2; }
+  .page--sandwiches .sw-section .seg { order: 3; margin: 0 20px 8px; }
+  .page--sandwiches .sw-section .sw-list { order: 4; }
+
   .sw-item { grid-template-columns: 78px minmax(0, 1fr); }
   .sw-num { width: 24px; height: 24px; font-size: 12px; top: -4px; left: -6px; }
   .sw-price__n { font-size: 17px; }

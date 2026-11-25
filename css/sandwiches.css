@@ -1,0 +1,180 @@
+/* =========================================================
+   DUNKIN' · Pantalla Sándwiches & Snacks
+   Reutiliza de bebidas.css la lista, las cajas de título
+   y los botones redondos (rosa en esta sección).
+   ========================================================= */
+
+/* ---------- Encabezado + combos destacados ---------- */
+.page--sandwiches .bev-intro__text .title-xl { font-size: 76px; }
+.sw-intro__sub { font-size: 28px; font-weight: 500; max-width: 420px; line-height: 1.3; }
+
+.sw-combo .card__media img { object-fit: contain; padding: 6%; }
+.sw-combo .card__title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; text-transform: uppercase; }
+.sw-combo__price { font-size: 34px; }
+.sw-combo__desc { font-size: 18px !important; line-height: 1.35; white-space: normal !important; overflow: visible !important; margin-top: 10px !important; }
+.sw-combo__desc { font-weight: 400 !important; }
+.sw-combo__desc strong { font-weight: 600; }
+.sw-combo .card__foot { margin-top: 14px; }
+.sw-save {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--brown);
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---------- Encabezado de la lista ---------- */
+.sw-section { padding-top: 96px; }
+.page--sandwiches .bev-head--left { padding-right: var(--gutter); }
+.page--sandwiches .bev-pill--left { width: auto; padding-right: 120px; }
+
+/* Interruptor (En combo / Solo sándwich · dips) */
+.seg {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  padding: 5px;
+  border-radius: 999px;
+  background: var(--pink-soft);
+}
+.seg__btn {
+  height: 56px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--brown);
+  font: 600 20px var(--font);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.seg__btn.is-active { background: var(--pink); color: var(--white); }
+
+/* ---------- Lista de sándwiches ---------- */
+.sw-list { padding-top: 0; }
+.sw-item__media { position: relative; }
+.sw-item .bev-item__img { aspect-ratio: 1; object-fit: contain; }
+.sw-num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pink);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page--sandwiches .bev-item__actions { justify-content: space-between; gap: 16px; }
+.sw-price { display: flex; flex-direction: column; }
+.sw-price__n { font-size: 32px; font-weight: 500; line-height: 1.1; }
+.sw-price__note { font-size: 16px; font-weight: 500; color: var(--pink); }
+.sw-actions { display: inline-flex; }
+
+/* ---------- Extra bites ---------- */
+.extra {
+  margin-top: 96px;
+  padding: 40px 48px;
+  border-radius: var(--radius-lg);
+  background: var(--pink);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  align-items: center;
+  gap: 48px;
+}
+.extra__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: 4%;
+}
+.extra__body { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.extra__title { font-size: 64px; font-weight: 700; text-transform: uppercase; line-height: 1; }
+.extra__sub { font-size: 26px; font-weight: 500; margin-top: -4px; }
+.extra__label { font-size: 20px; font-weight: 600; margin-top: 12px; }
+.seg--dip { background: rgba(255, 255, 255, .25); }
+.seg--dip .seg__btn { color: var(--white); }
+.seg--dip .seg__btn.is-active { background: var(--white); color: var(--pink); }
+.extra__packs { display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 14px; margin-top: 10px; }
+.pack {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 8px 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--brown);
+  font: 600 19px var(--font);
+  cursor: pointer;
+  text-align: left;
+  transition: transform .15s ease;
+}
+.pack:hover { transform: translateY(-2px); }
+.pack strong { font-weight: 700; }
+.pack i {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--brown);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pack svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1200px) {
+  .page--sandwiches .bev-intro__text .title-xl { font-size: 50px; }
+  .sw-price__n { font-size: 26px; }
+  .extra__title { font-size: 48px; }
+}
+
+/* Celular */
+@media (max-width: 900px) {
+  .page--sandwiches .bev-intro__text .title-xl { font-size: 32px; }
+  .sw-intro__sub { font-size: 15px; }
+  .sw-combo .card__title { font-size: 15px; flex-wrap: wrap; gap: 0 6px; }
+  .sw-combo__price { font-size: 15px; }
+  .sw-combo .card__desc { display: block; }
+  .sw-combo__desc { font-size: 12px !important; margin-top: 6px !important; }
+  .sw-combo .card__foot { margin-top: 8px; }
+  .sw-save { font-size: 12px; padding: 4px 8px; }
+
+
+  .sw-section { padding-top: 40px; }
+  .page--sandwiches .bev-head--left { flex-direction: column; align-items: stretch; gap: 16px; padding-right: 0; }
+  .page--sandwiches .bev-pill--left { width: auto; align-self: flex-start; padding-right: 48px; }
+  .page--sandwiches .bev-head .seg { margin: 0 20px; }
+  .seg__btn { height: 40px; padding: 0 14px; font-size: 14px; }
+
+  .sw-item { grid-template-columns: 78px minmax(0, 1fr); }
+  .sw-num { width: 24px; height: 24px; font-size: 12px; top: -4px; left: -6px; }
+  .sw-price__n { font-size: 17px; }
+  .sw-price__note { font-size: 12px; }
+
+  .extra { margin-top: 40px; padding: 20px; gap: 16px; grid-template-columns: minmax(0, 1fr); border-radius: 28px; }
+  .extra__img { max-width: 220px; justify-self: center; }
+  .extra__body { align-items: stretch; gap: 10px; }
+  .extra__title { font-size: 30px; }
+  .extra__sub { font-size: 15px; }
+  .extra__label { font-size: 14px; margin-top: 4px; }
+  .extra__packs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 4px; }
+  .pack { height: 48px; padding: 0 5px 0 14px; font-size: 13px; gap: 6px; }
+  .pack i { width: 38px; height: 38px; }
+  .pack svg { width: 18px; height: 18px; }
+}

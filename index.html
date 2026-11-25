@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunkin' | Tu pausa, sin fila</title>
+  <meta name="description" content="Pide tu café y tu antojo desde el celular y recógelo listo, a la hora que tú digas.">
+
+  <!-- Tipografía: Fredoka (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+<div class="page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="header container">
+    <a href="index.html" class="header__logo" aria-label="Dunkin' inicio">
+      <img src="img/logo.svg" alt="Dunkin'" width="194" height="34">
+    </a>
+
+    <nav class="header__nav" id="menu-principal" aria-label="Principal">
+      <a href="bebidas.html">Menú</a>
+      <a href="#combos">Combos</a>
+      <a href="#promocion">Promociones</a>
+      <a href="#ubicaciones">Ubicaciones</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" class="icon-btn icon-btn--outline" aria-label="Mi cuenta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4.5" fill="currentColor"/><path d="M3.5 21c0-4.4 3.8-7.5 8.5-7.5s8.5 3.1 8.5 7.5z" fill="currentColor"/></svg>
+      </a>
+      <a href="bebidas.html#carrito" class="icon-btn icon-btn--fill" aria-label="Mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M7 3.5h10l1 3H6z"/><path d="M5 6.5h14"/><path d="M6.5 6.5l1.4 14h8.2l1.4-14"/><path d="M7.2 11h9.6"/></svg>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </a>
+      <button class="icon-btn icon-btn--outline header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Menú desplegable (botón de 3 líneas) -->
+    <nav class="menu-panel" id="menu-panel" aria-label="Menú completo" hidden>
+      <ul>
+        <li><a href="bebidas.html">Menú</a></li>
+        <li><a href="#combos">Combos</a></li>
+        <li><a href="#promocion">Promociones</a></li>
+        <li><a href="#ubicaciones">Ubicaciones</a></li>
+      </ul>
+      <ul class="menu-panel__sub">
+        <li><a href="#">Nuestra Historia</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="container">
+      <div class="hero">
+        <h1 class="hero__title">Tu pausa, sin fila</h1>
+        <p class="hero__text">Pide tu café y tu antojo desde el celular y recógelo listo, a la hora que tú digas.</p>
+        <div class="hero__actions">
+          <a href="#ubicaciones" class="btn btn--orange btn--xl">Pick up</a>
+          <a href="#" class="btn btn--orange btn--xl">Delivery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ¿DE QUÉ ES TU ANTOJO? ========== -->
+    <section class="feature container" id="antojo">
+      <div class="feature__side">
+        <h2 class="title-xl">¿De qué es tu antojo?</h2>
+
+        <div class="tabs" role="tablist" aria-label="Categorías del menú">
+          <button class="tab is-active" role="tab" aria-selected="true" data-cat="bebidas">Bebidas</button>
+          <button class="tab" role="tab" aria-selected="false" data-cat="donas">Donas</button>
+          <button class="tab" role="tab" aria-selected="false" data-cat="sandwiches">Sandwiches</button>
+        </div>
+
+        <a href="bebidas.html" class="link-more" id="antojo-ver-todo">Ver todo
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- Las tarjetas se generan con JS según la pestaña (ver js/main.js) -->
+      <div class="feature__cards" id="antojo-cards" role="tabpanel" aria-live="polite"></div>
+    </section>
+
+    <!-- ========== COMBOS ========== -->
+    <section class="feature feature--reverse container" id="combos">
+      <div class="feature__cards">
+        <article class="card card--orange">
+          <div class="card__media">
+            <img src="img/combos/clasico.jpg" alt="Café con dona glaseada">
+          </div>
+          <h3 class="card__title">Clásico</h3>
+          <p class="card__desc">Café + Dona Clásica</p>
+          <div class="card__foot">
+            <p class="card__price">$80</p>
+            <button class="add-btn" data-name="Clásico" data-price="80" aria-label="Agregar Clásico">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="card card--orange">
+          <div class="card__media">
+            <img src="img/combos/combo_oficina.jpg" alt="Caja de donas con seis cafés">
+          </div>
+          <h3 class="card__title">Combo oficina</h3>
+          <p class="card__desc">Docena de donas + 6 cafés + Munchkins</p>
+          <div class="card__foot">
+            <p class="card__price">$520</p>
+            <button class="add-btn" data-name="Combo oficina" data-price="520" aria-label="Agregar Combo oficina">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="feature__side feature__side--right">
+        <h2 class="title-xl">Combos</h2>
+        <p class="feature__text">Todo junto, a mejor precio.<br>Para ti o para el equipo.</p>
+        <a href="combos.html" class="link-more">Ver todo
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== LA PROMOCIÓN DE HOY ========== -->
+    <section id="promocion" class="promo-section">
+      <!-- Conector: caja naranja debajo de una blanca con esquina redondeada -->
+      <div class="conector conector--orange" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <div class="label-box label-box--orange">
+        <h2 class="title-xl">La promoción<br>de hoy</h2>
+      </div>
+
+      <div class="promo">
+        <div class="promo__text">
+          <h3 class="title-lg">3x2 en frappé<br>caramel</h3>
+          <a href="#" class="btn btn--orange btn--lg">Obtener ahora</a>
+        </div>
+        <img class="promo__img" src="img/frappes.png" alt="Tres frappés de caramelo con crema batida">
+      </div>
+      <!-- Conector inferior: la banda rosa baja por la izquierda y se curva hacia el blanco -->
+      <div class="conector conector--pink conector--bottom" aria-hidden="true"><div class="conector__blanco"></div></div>
+    </section>
+
+    <!-- ========== REFRESHERS ========== -->
+    <section class="refreshers">
+      <div class="refreshers__words" aria-hidden="true">
+        <span>Refreshers Refreshers Refreshers</span>
+        <span>Refreshers Refreshers Refreshers</span>
+        <span>Refreshers Refreshers Refreshers</span>
+        <span>Refreshers Refreshers Refreshers</span>
+      </div>
+
+      <div class="refreshers__inner container">
+        <img class="refreshers__img" src="img/rfrshrs.png" alt="Refreshers de mango, fresa y té verde">
+        <div class="refreshers__cta">
+          <h2 class="title-lg">Refresca tu día</h2>
+          <a href="refreshers.html" class="btn btn--pink btn--lg">Elige tu favorito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERCA DE TI ========== -->
+    <section id="ubicaciones" class="locations-section">
+      <div class="conector conector--pink" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <div class="label-box label-box--pink">
+        <h2 class="title-xl">Cerca de ti,<br>ahora</h2>
+      </div>
+
+      <div class="locations container">
+        <div class="locations__map">
+          <img src="img/mapa.jpg" alt="Mapa con las sucursales cercanas">
+          <span class="pin" style="left:30%; top:36%;" aria-hidden="true"></span>
+          <span class="pin" style="left:64%; top:58%;" aria-hidden="true"></span>
+        </div>
+
+        <div class="locations__panel">
+          <label for="buscar-sucursal" class="locations__label">Tu ubicación o código postal</label>
+          <input id="buscar-sucursal" class="input" type="search" placeholder="Escribe algo" autocomplete="postal-code">
+
+          <ul class="stores" id="stores">
+            <li class="store" data-search="buenavista cuauhtemoc 06350">
+              <div>
+                <h3 class="store__name">Dunkin' Buenavista</h3>
+                <p class="store__hours">Abierto · Cierra a las 10 p.m.</p>
+              </div>
+              <a href="#" class="btn btn--orange btn--sm">Ordenar ahora</a>
+            </li>
+            <li class="store" data-search="mitikah coyoacan 04000 benito juarez">
+              <div>
+                <h3 class="store__name">Dunkin' Mitikah</h3>
+                <p class="store__hours">Abierto · Cierra a las 10 p.m.</p>
+              </div>
+              <a href="#" class="btn btn--orange btn--sm">Ordenar ahora</a>
+            </li>
+          </ul>
+          <p class="stores__empty" id="stores-empty" hidden>No encontramos sucursales con ese dato. Prueba con otra colonia o código postal.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <h2 class="footer__title"><span class="solo-escritorio">Regístrate para conocer nuestras ofertas y nuevos productos.</span><span class="solo-movil">Promos y nuevos productos directo a tu correo</span></h2>
+
+        <form class="newsletter" id="newsletter" novalidate>
+          <label for="correo" class="sr-only">Correo electrónico</label>
+          <input id="correo" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+          <button type="submit" aria-label="Enviar correo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M21 3L3 10.5l7 2.5 2.5 7z"/><path d="M21 3L10 13"/></svg>
+          </button>
+          <p class="newsletter__msg" id="newsletter-msg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="footer__middle">
+        <p class="footer__text">Comparte tus momentos favoritos con<br>#DunkinContigo y sé parte de algo delicioso.</p>
+
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social__pin" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.3 2C6.8 2 4 5.9 4 9.2c0 2 .8 3.8 2.4 4.4.3.1.5 0 .6-.3l.2-1c.1-.3 0-.4-.2-.7-.5-.6-.8-1.3-.8-2.4 0-3.1 2.3-5.8 6-5.8 3.3 0 5.1 2 5.1 4.7 0 3.5-1.6 6.5-3.9 6.5-1.3 0-2.2-1-1.9-2.3.4-1.5 1.1-3.2 1.1-4.3 0-1-.5-1.8-1.6-1.8-1.3 0-2.3 1.3-2.3 3.1 0 1.1.4 1.9.4 1.9l-1.5 6.4c-.4 1.9-.1 4.2 0 4.4 0 .1.2.2.3.1.1-.2 1.6-2 2.1-3.8l.8-3.2c.4.8 1.6 1.5 2.9 1.5 3.8 0 6.4-3.5 6.4-8.1C20.2 5.4 17 2 12.3 2z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 3h-3.2v12.3a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.3a6 6 0 1 0 5.1 6V9a7.4 7.4 0 0 0 4.3 1.4V7.2a4.3 4.3 0 0 1-4.3-4.2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h3>Nosotros:</h3>
+          <ul>
+            <li><a href="#">Nuestra Historia</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>¿Necesitas ayuda?</h3>
+          <ul>
+            <li><a href="#">Mapa del sitio</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Privacidad</h3>
+          <ul>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--no-title">
+          <ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="js/carrito.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

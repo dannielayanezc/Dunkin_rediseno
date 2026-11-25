@@ -1,0 +1,83 @@
+/* =========================================================
+   DUNKIN' · Pantalla Donas & Panadería
+   Reutiliza de bebidas.css: encabezado con favoritos,
+   cajas de título (bev-pill) y botones redondos.
+   ========================================================= */
+
+/* Título largo: dos renglones en escritorio */
+.page--donas .bev-intro__text .title-xl { font-size: 80px; }
+
+/* ---------- Cajas de título con precio ---------- */
+.donut-section--premium { padding-top: 40px; }
+.donut-section--clasicas { padding-top: 110px; }
+
+.donut-pill { width: min(820px, 60%); }
+.donut-pill .title-xl { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 24px; }
+.donut-pill__price { font-size: 48px; font-weight: 600; text-transform: none; }
+
+/* ---------- Cuadrícula de donas ---------- */
+.donut-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 56px 40px;
+  padding-top: 64px;
+}
+.donut-section--clasicas .donut-grid { padding-top: 8px; }
+
+.donut {
+  width: calc((100% - 4 * 40px) / 5);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.donut__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  transition: transform .2s ease;
+}
+.donut:hover .donut__img { transform: rotate(-4deg) scale(1.03); }
+.donut__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 6px;
+}
+.donut__name { font-size: 26px; font-weight: 600; line-height: 1.1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .donut:hover .donut__img { transform: none; }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1200px) {
+  .page--donas .bev-intro__text .title-xl { font-size: 64px; }
+  .donut { width: calc((100% - 3 * 32px) / 4); }
+  .donut-grid { gap: 48px 32px; }
+  .donut__name { font-size: 22px; }
+  .donut-pill__price { font-size: 36px; }
+}
+
+/* Celular: igual al diseño de 430 px (2 columnas) */
+@media (max-width: 900px) {
+  .page--donas .bev-intro__text .title-xl { font-size: 30px; }
+  .solo-escritorio-br { display: none; }
+
+  .donut-section--premium { padding-top: 0; }
+  .donut-section--premium .conector__blanco { height: 70px; border-bottom-right-radius: 90px; }
+  .donut-section--clasicas { padding-top: 40px; }
+
+  .donut-pill { width: 68%; }
+  .bev-pill--left.donut-pill { width: 75%; }
+  .donut-pill .title-xl { font-size: 30px; gap: 0 12px; }
+  .donut-pill__price { font-size: 20px; }
+
+  .donut-grid { gap: 26px 28px; padding: 32px 36px 0; justify-content: flex-start; }
+  .donut-section--clasicas .donut-grid { padding-top: 0; }
+  .donut { width: calc((100% - 28px) / 2); gap: 8px; }
+  .donut__row { padding: 0; }
+  .donut__name { font-size: 17px; }
+}

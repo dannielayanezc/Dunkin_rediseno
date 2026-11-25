@@ -1,0 +1,66 @@
+/* =========================================================
+   DUNKIN' · Pantalla Refreshers
+   Reutiliza de bebidas.css la lista, los tamaños y las
+   cajas de título; de styles.css la composición Refreshers.
+   ========================================================= */
+
+/* Botones de categorías arriba de la composición */
+.cat-nav--top { padding-top: 8px; padding-bottom: 8px; }
+
+.refreshers--page { margin-top: 8px; }
+
+/* Favoritos */
+.rf-intro { padding-top: 96px; }
+.page--refreshers .bev-intro__text .title-xl { font-size: 76px; }
+.rf-intro .bev-intro__text { grid-row: 1 / span 2; align-self: center; }
+.rf-intro .card__media .img-ph { border-radius: 0; border: 0; }
+
+/* Tarjetas rosas: precio más arriba, pegado al nombre */
+.rf-intro .card__foot { margin-top: 0; align-items: flex-start; }
+.rf-intro .card__price { margin-top: 2px; line-height: 1.2; }
+
+/* Tamaños con onzas en lugar de precio */
+.sizes--oz .size__p { font-size: 26px; font-weight: 500; }
+
+/* Sabores */
+.flavors { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.flavor {
+  height: 40px;
+  padding: 0 16px;
+  border: 2px solid var(--pink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--brown);
+  font: 500 16px var(--font);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.flavor:hover { background: var(--pink-soft); }
+.flavor.is-active { background: var(--pink); color: var(--white); }
+
+/* Precio + botón */
+.page--refreshers .bev-item__actions { gap: 20px; }
+.rf-price { font-size: 32px; font-weight: 500; min-width: 72px; }
+.rf-actions { display: inline-flex; }
+.page--refreshers .bev-item__img.img-ph { aspect-ratio: 3 / 4; width: 170px; min-height: 0; font-size: 13px; }
+
+@media (max-width: 1200px) {
+  .page--refreshers .bev-intro__text .title-xl { font-size: 52px; }
+  .page--refreshers .bev-item__img.img-ph { width: 130px; }
+  .rf-price { font-size: 26px; }
+}
+
+/* Celular */
+@media (max-width: 900px) {
+  .cat-nav--top { padding-top: 0; margin: 0; }
+  .page--refreshers .bev-intro__text .title-xl { font-size: 34px; }
+  .refreshers--page { margin-top: 0; }
+  .rf-intro { padding-top: 24px; }
+  .rf-intro .bev-intro__text { grid-row: auto; }
+  .sizes--oz .size__p { font-size: 13px; }
+  .flavors { gap: 6px; margin-top: 4px; }
+  .flavor { height: 28px; padding: 0 10px; font-size: 12px; border-width: 1.5px; }
+  .page--refreshers .bev-item__actions { gap: 12px; }
+  .rf-price { font-size: 17px; min-width: 40px; }
+  .page--refreshers .bev-item__img.img-ph { width: 78px; font-size: 10px; padding: 4px; }
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunkin' | Donas & Panadería</title>
+  <meta name="description" content="Donas premium y clásicas de Dunkin': elige tus favoritas y arma tu pedido.">
+
+  <!-- Tipografía: Fredoka (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/bebidas.css?v=3">
+  <link rel="stylesheet" href="css/donas.css?v=3">
+</head>
+<body>
+<div class="page page--bebidas page--donas">
+
+  <!-- ========== HEADER ========== -->
+  <header class="header container">
+    <div class="header__brand">
+      <a href="index.html" class="back-btn" aria-label="Regresar al inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </a>
+      <a href="index.html" class="header__logo" aria-label="Dunkin' inicio">
+      <img src="img/logo.svg" alt="Dunkin'" width="194" height="34">
+      </a>
+    </div>
+
+    <nav class="header__nav" id="menu-principal" aria-label="Principal">
+      <a href="bebidas.html">Menú</a>
+      <a href="combos.html">Combos</a>
+      <a href="index.html#promocion">Promociones</a>
+      <a href="index.html#ubicaciones">Ubicaciones</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" class="icon-btn icon-btn--outline" aria-label="Mi cuenta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4.5" fill="currentColor"/><path d="M3.5 21c0-4.4 3.8-7.5 8.5-7.5s8.5 3.1 8.5 7.5z" fill="currentColor"/></svg>
+      </a>
+      <a href="#carrito" class="icon-btn icon-btn--fill" aria-label="Mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M7 3.5h10l1 3H6z"/><path d="M5 6.5h14"/><path d="M6.5 6.5l1.4 14h8.2l1.4-14"/><path d="M7.2 11h9.6"/></svg>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </a>
+      <button class="icon-btn icon-btn--outline header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Menú desplegable (botón de 3 líneas) -->
+    <nav class="menu-panel" id="menu-panel" aria-label="Menú completo" hidden>
+      <ul>
+        <li><a href="bebidas.html">Menú</a></li>
+        <li><a href="combos.html">Combos</a></li>
+        <li><a href="index.html#promocion">Promociones</a></li>
+        <li><a href="index.html#ubicaciones">Ubicaciones</a></li>
+      </ul>
+      <ul class="menu-panel__sub">
+        <li><a href="#">Nuestra Historia</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== DONAS & PANADERÍA · TUS FAVORITOS ========== -->
+    <section class="bev-intro container">
+      <div class="bev-intro__text">
+        <h1 class="title-xl">Donas &amp;<br class="solo-escritorio-br"> Panadería</h1>
+        <p class="bev-intro__sub">Tus favoritos</p>
+      </div>
+
+      <!-- Categorías del menú (en celular va arriba, debajo del header) -->
+      <nav class="cat-nav" aria-label="Categorías del menú">
+        <a href="bebidas.html" class="cat-chip">Bebidas</a>
+        <a href="refreshers.html" class="cat-chip">Refreshers</a>
+        <a href="sandwiches.html" class="cat-chip">Sandwiches</a>
+        <a href="combos.html" class="cat-chip">Combos</a>
+      </nav>
+
+      <div class="feature__cards bev-favs">
+        <article class="card card--orange card--fav">
+          <div class="card__media"><img src="img/donas/chocolate_rainbow.jpg" alt="Dona Chocolate Rainbow"></div>
+          <h2 class="card__title">Chocolate Rainbow</h2>
+          <p class="card__desc"></p>
+          <div class="card__foot">
+            <p class="card__price">$29</p>
+            <button class="add-btn" data-name="Chocolate Rainbow" data-price="29" data-detail="Clásica" aria-label="Agregar Chocolate Rainbow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </article>
+        <article class="card card--orange card--fav">
+          <div class="card__media"><img src="img/donas/glaseada.jpg" alt="Dona Glaseada"></div>
+          <h2 class="card__title">Glaseada</h2>
+          <p class="card__desc"></p>
+          <div class="card__foot">
+            <p class="card__price">$29</p>
+            <button class="add-btn" data-name="Glaseada" data-price="29" data-detail="Favorita" aria-label="Agregar Glaseada">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PREMIUM ========== -->
+    <section class="donut-section donut-section--premium" aria-labelledby="titulo-premium">
+      <div class="conector conector--orange" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <div class="label-box label-box--orange bev-pill donut-pill">
+        <h2 class="title-xl" id="titulo-premium">Premium <span class="donut-pill__price">$49 c/u</span></h2>
+      </div>
+      <ul class="donut-grid container">
+        <li class="donut">
+          <img class="donut__img" src="img/donas/bavaria.jpg" alt="Dona Bavaria" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Bavaria</h3>
+            <button type="button" class="round-btn" data-name="Bavaria" data-price="49" data-detail="Premium" aria-label="Agregar Bavaria"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/boston_kreme.jpg" alt="Dona Boston Kreme" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Boston Kreme</h3>
+            <button type="button" class="round-btn" data-name="Boston Kreme" data-price="49" data-detail="Premium" aria-label="Agregar Boston Kreme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/chocolate_hazelnut.jpg" alt="Dona Chocolate Hazelnut" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Chocolate Hazelnut</h3>
+            <button type="button" class="round-btn" data-name="Chocolate Hazelnut" data-price="49" data-detail="Premium" aria-label="Agregar Chocolate Hazelnut"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/jelly.jpg" alt="Dona Jelly Donut" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Jelly Donut</h3>
+            <button type="button" class="round-btn" data-name="Jelly Donut" data-price="49" data-detail="Premium" aria-label="Agregar Jelly Donut"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== CLÁSICAS ========== -->
+    <section class="donut-section donut-section--clasicas" aria-labelledby="titulo-clasicas">
+      <div class="label-box label-box--pink bev-pill bev-pill--left donut-pill">
+        <h2 class="title-xl" id="titulo-clasicas">Clásicas <span class="donut-pill__price">$29 c/u</span></h2>
+      </div>
+      <div class="conector conector--pink conector--bottom bev-conector-sin" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <ul class="donut-grid container">
+        <li class="donut">
+          <img class="donut__img" src="img/donas/chocolate_glazed.jpg" alt="Dona Chocolate Glazed" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Chocolate Glazed</h3>
+            <button type="button" class="round-btn" data-name="Chocolate Glazed" data-price="29" data-detail="Clásica" aria-label="Agregar Chocolate Glazed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/maple_frosted.jpg" alt="Dona Maple Frosted" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Maple Frosted</h3>
+            <button type="button" class="round-btn" data-name="Maple Frosted" data-price="29" data-detail="Clásica" aria-label="Agregar Maple Frosted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/double_chocolate.jpg" alt="Dona Double Chocolate" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Double Chocolate</h3>
+            <button type="button" class="round-btn" data-name="Double Chocolate" data-price="29" data-detail="Clásica" aria-label="Agregar Double Chocolate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/chocolate_frosted.jpg" alt="Dona Chocolate Frosted" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Chocolate Frosted</h3>
+            <button type="button" class="round-btn" data-name="Chocolate Frosted" data-price="29" data-detail="Clásica" aria-label="Agregar Chocolate Frosted"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/glaseada.jpg" alt="Dona Glaseada" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Glaseada</h3>
+            <button type="button" class="round-btn" data-name="Glaseada" data-price="29" data-detail="Clásica" aria-label="Agregar Glaseada"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/chocolate_rainbow.jpg" alt="Dona Chocolate Rainbow" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Chocolate Rainbow</h3>
+            <button type="button" class="round-btn" data-name="Chocolate Rainbow" data-price="29" data-detail="Clásica" aria-label="Agregar Chocolate Rainbow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/old_fashioned.jpg" alt="Dona Old Fashioned" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Old Fashioned</h3>
+            <button type="button" class="round-btn" data-name="Old Fashioned" data-price="29" data-detail="Clásica" aria-label="Agregar Old Fashioned"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/vainilla_rainbow.jpg" alt="Dona Vainilla Rainbow" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Vainilla Rainbow</h3>
+            <button type="button" class="round-btn" data-name="Vainilla Rainbow" data-price="29" data-detail="Clásica" aria-label="Agregar Vainilla Rainbow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+        <li class="donut">
+          <img class="donut__img" src="img/donas/strawberry_rainbow.jpg" alt="Dona Strawberry Rainbow" loading="lazy">
+          <div class="donut__row">
+            <h3 class="donut__name">Strawberry Rainbow</h3>
+            <button type="button" class="round-btn" data-name="Strawberry Rainbow" data-price="29" data-detail="Clásica" aria-label="Agregar Strawberry Rainbow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== CARRITO (igual en todas las pantallas, menos la landing) ========== -->
+    <section class="cart container" id="carrito" aria-labelledby="titulo-carrito">
+      <h2 class="title-xl cart__title" id="titulo-carrito">Carrito</h2>
+      <ul class="cart__list" id="cart-list"></ul>
+      <p class="cart__empty" id="cart-empty">Tu carrito está vacío. Agrega algo con el botón +.</p>
+      <div class="cart__summary" id="cart-summary" hidden>
+        <p class="cart__total">Total <strong id="cart-total">$0</strong></p>
+        <a href="index.html#ubicaciones" class="btn btn--orange btn--lg">Ordenar ahora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <h2 class="footer__title"><span class="solo-escritorio">Regístrate para conocer nuestras ofertas y nuevos productos.</span><span class="solo-movil">Promos y nuevos productos directo a tu correo</span></h2>
+
+        <form class="newsletter" id="newsletter" novalidate>
+          <label for="correo" class="sr-only">Correo electrónico</label>
+          <input id="correo" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+          <button type="submit" aria-label="Enviar correo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M21 3L3 10.5l7 2.5 2.5 7z"/><path d="M21 3L10 13"/></svg>
+          </button>
+          <p class="newsletter__msg" id="newsletter-msg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="footer__middle">
+        <p class="footer__text">Comparte tus momentos favoritos con<br>#DunkinContigo y sé parte de algo delicioso.</p>
+
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social__pin" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.3 2C6.8 2 4 5.9 4 9.2c0 2 .8 3.8 2.4 4.4.3.1.5 0 .6-.3l.2-1c.1-.3 0-.4-.2-.7-.5-.6-.8-1.3-.8-2.4 0-3.1 2.3-5.8 6-5.8 3.3 0 5.1 2 5.1 4.7 0 3.5-1.6 6.5-3.9 6.5-1.3 0-2.2-1-1.9-2.3.4-1.5 1.1-3.2 1.1-4.3 0-1-.5-1.8-1.6-1.8-1.3 0-2.3 1.3-2.3 3.1 0 1.1.4 1.9.4 1.9l-1.5 6.4c-.4 1.9-.1 4.2 0 4.4 0 .1.2.2.3.1.1-.2 1.6-2 2.1-3.8l.8-3.2c.4.8 1.6 1.5 2.9 1.5 3.8 0 6.4-3.5 6.4-8.1C20.2 5.4 17 2 12.3 2z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 3h-3.2v12.3a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.3a6 6 0 1 0 5.1 6V9a7.4 7.4 0 0 0 4.3 1.4V7.2a4.3 4.3 0 0 1-4.3-4.2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h3>Nosotros:</h3>
+          <ul>
+            <li><a href="#">Nuestra Historia</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>¿Necesitas ayuda?</h3>
+          <ul>
+            <li><a href="#">Mapa del sitio</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Privacidad</h3>
+          <ul>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--no-title">
+          <ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra fija con el resumen de la orden: se oculta al llegar al carrito -->
+  <a href="#carrito" class="cart-bar" id="cart-bar" hidden>
+    <span class="cart-bar__label">Tu orden</span>
+    <span class="cart-bar__count" id="cart-bar-count">0 artículos</span>
+    <strong class="cart-bar__total" id="cart-bar-total">$0</strong>
+    <span class="cart-bar__cta">Ver carrito</span>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="js/carrito.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

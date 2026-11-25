@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunkin' | Combos</title>
+  <meta name="description" content="Combos de Dunkin': todo junto a mejor precio, para ti o para el equipo.">
+
+  <!-- Tipografía: Fredoka (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@75..125,300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/bebidas.css?v=3">
+  <link rel="stylesheet" href="css/combos.css?v=3">
+</head>
+<body>
+<div class="page page--bebidas page--combos">
+
+  <!-- ========== HEADER ========== -->
+  <header class="header container">
+    <div class="header__brand">
+      <a href="index.html" class="back-btn" aria-label="Regresar al inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </a>
+      <a href="index.html" class="header__logo" aria-label="Dunkin' inicio">
+      <img src="img/logo.svg" alt="Dunkin'" width="194" height="34">
+      </a>
+    </div>
+
+    <nav class="header__nav" id="menu-principal" aria-label="Principal">
+      <a href="bebidas.html">Menú</a>
+      <a href="combos.html" aria-current="page">Combos</a>
+      <a href="index.html#promocion">Promociones</a>
+      <a href="index.html#ubicaciones">Ubicaciones</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" class="icon-btn icon-btn--outline" aria-label="Mi cuenta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4.5" fill="currentColor"/><path d="M3.5 21c0-4.4 3.8-7.5 8.5-7.5s8.5 3.1 8.5 7.5z" fill="currentColor"/></svg>
+      </a>
+      <a href="#carrito" class="icon-btn icon-btn--fill" aria-label="Mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M7 3.5h10l1 3H6z"/><path d="M5 6.5h14"/><path d="M6.5 6.5l1.4 14h8.2l1.4-14"/><path d="M7.2 11h9.6"/></svg>
+        <span class="cart-badge" id="cart-badge" hidden>0</span>
+      </a>
+      <button class="icon-btn icon-btn--outline header__burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Menú desplegable (botón de 3 líneas) -->
+    <nav class="menu-panel" id="menu-panel" aria-label="Menú completo" hidden>
+      <ul>
+        <li><a href="bebidas.html">Menú</a></li>
+        <li><a href="index.html#combos">Combos</a></li>
+        <li><a href="index.html#promocion">Promociones</a></li>
+        <li><a href="index.html#ubicaciones">Ubicaciones</a></li>
+      </ul>
+      <ul class="menu-panel__sub">
+        <li><a href="#">Nuestra Historia</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== COMBOS · COMBO DEL DÍA ========== -->
+    <section class="cmb-intro container">
+      <div class="cmb-intro__text">
+        <h1 class="title-xl">Combos</h1>
+        <p class="bev-intro__sub cmb-intro__sub">Todo junto, a mejor precio.<br>Para ti o para el equipo.</p>
+
+        <div class="pickup">
+          <div class="pickup__info">
+            <label for="sucursal" class="pickup__label">Recoger en</label>
+            <select id="sucursal" class="pickup__select">
+              <option>Dunkin' Buenavista</option>
+              <option>Dunkin' Mitikah</option>
+            </select>
+          </div>
+          <p class="pickup__time">Lista en <strong>10 min</strong></p>
+        </div>
+      </div>
+
+      <!-- Categorías del menú (en celular va arriba, debajo del header) -->
+      <nav class="cat-nav" aria-label="Categorías del menú">
+        <a href="bebidas.html" class="cat-chip">Bebidas</a>
+        <a href="refreshers.html" class="cat-chip">Refreshers</a>
+        <a href="donas.html" class="cat-chip">Donas</a>
+        <a href="sandwiches.html" class="cat-chip">Sandwiches</a>
+      </nav>
+
+      <article class="hero-combo">
+        <div class="hero-combo__media"><img src="img/sandwiches/sw_combo1.jpg" alt="D-KIN con hash browns y café americano"></div>
+        <div class="hero-combo__body">
+          <span class="hero-combo__tag">Combo del día</span>
+          <h2 class="hero-combo__title">Combo 1</h2>
+          <p class="hero-combo__desc"><strong>D-KIN</strong> (huevo, tocino, salchicha y queso) + Hash brown 6 pzs + Café Americano CH o Iced Green Tea CH</p>
+          <div class="hero-combo__foot">
+            <div>
+              <p class="hero-combo__price">$119</p>
+              <p class="hero-combo__save">Por separado $167 · ahorras $48</p>
+            </div>
+            <button class="add-btn" data-name="Combo 1" data-price="119" data-detail="D-KIN + Hash brown 6 pzs + bebida CH" aria-label="Agregar Combo 1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== PARA TI ========== -->
+    <section class="cmb-section" aria-labelledby="titulo-ti">
+      <div class="conector conector--orange" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <div class="cmb-head">
+        <div class="label-box label-box--orange bev-pill">
+          <h2 class="title-xl" id="titulo-ti">Para ti</h2>
+        </div>
+      </div>
+      <div class="cmb-grid container">
+        <article class="card card--orange cmb-card">
+          <div class="card__media card__media--cover" style="background:#FEFEFE"><img src="img/combos/clasico.jpg" alt="Café americano con dona Strawberry Rainbow"></div>
+          <h3 class="card__title">Clásico</h3>
+          <p class="card__desc">Café Americano + Dona clásica</p>
+          <div class="card__foot">
+            <p class="card__price">$80</p>
+            <button class="add-btn" data-name="Clásico" data-price="80" data-detail="Café Americano + Dona clásica" aria-label="Agregar Clásico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+        <article class="card card--orange cmb-card">
+          <div class="card__media"><img src="img/sandwiches/sw_combo2.jpg" alt="Sándwich con hash browns e iced tea"></div>
+          <h3 class="card__title">Combo 2</h3>
+          <p class="card__desc">Sándwich panela, jamón y espinaca + Hash brown 6 pzs + bebida CH<span class="cmb-save">Ahorras $48</span></p>
+          <div class="card__foot">
+            <p class="card__price">$99</p>
+            <button class="add-btn" data-name="Combo 2" data-price="99" data-detail="Sándwich panela, jamón y espinaca + Hash brown 6 pzs + bebida CH" aria-label="Agregar Combo 2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+        <article class="card card--orange cmb-card">
+          <div class="card__media card__media--cover" style="background:#FEFEFE"><img src="img/combos/arma_tu_combo.jpg" alt="Sándwich con café helado"></div>
+          <h3 class="card__title">Arma tu combo</h3>
+          <p class="card__desc">Tu sándwich favorito + Hash brown 6 pzs + café helado o Iced Green Tea</p>
+          <div class="card__foot">
+            <p class="card__price">desde $85</p>
+            <a class="add-btn add-btn--link" href="sandwiches.html" aria-label="Elegir sándwich para armar tu combo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
+          </div>
+        </article>
+        <article class="card card--orange cmb-card">
+          <div class="card__media"><img src="img/combos/tu_break.jpg" alt="Refresher de mango con dona de chocolate"></div>
+          <h3 class="card__title">Tu break</h3>
+          <p class="card__desc">Refresher M + Dona clásica</p>
+          <div class="card__foot">
+            <p class="card__price">$85</p>
+            <button class="add-btn" data-name="Tu break" data-price="85" data-detail="Refresher M + Dona clásica" aria-label="Agregar Tu break"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PARA COMPARTIR ========== -->
+    <section class="cmb-section cmb-section--pink" aria-labelledby="titulo-compartir">
+      <div class="cmb-head cmb-head--left">
+        <div class="label-box label-box--pink bev-pill bev-pill--left">
+          <h2 class="title-xl" id="titulo-compartir">Para compartir</h2>
+        </div>
+      </div>
+      <div class="conector conector--pink conector--bottom bev-conector-sin" aria-hidden="true"><div class="conector__blanco"></div></div>
+      <div class="cmb-grid container">
+        <article class="card card--pink cmb-card">
+          <div class="card__media card__media--cover" style="background:#FAF9FA"><img src="img/combos/combo_oficina.jpg" alt="Cafés, donas y cajas de Munchkins para compartir"></div>
+          <h3 class="card__title">Combo oficina</h3>
+          <p class="card__desc">6 cafés + docena de donas + Munchkins</p>
+          <div class="card__foot">
+            <p class="card__price">$520</p>
+            <button class="add-btn" data-name="Combo oficina" data-price="520" data-detail="6 cafés + docena de donas + Munchkins" aria-label="Agregar Combo oficina"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+        <article class="card card--pink cmb-card">
+          <div class="card__media card__media--cover" style="background:#EFEFEE"><img src="img/combos/box_o_joe.jpg" alt="Cappuccino, café helado y donas"></div>
+          <h3 class="card__title">Café para dos</h3>
+          <p class="card__desc">1 cappuccino + 1 café helado + 2 donas<span class="cmb-save">Ahorras $27</span></p>
+          <div class="card__foot">
+            <p class="card__price">$169</p>
+            <button class="add-btn" data-name="Café para dos" data-price="169" data-detail="1 cappuccino + 1 café helado + 2 donas" aria-label="Agregar Café para dos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+        <article class="card card--pink cmb-card">
+          <div class="card__media card__media--cover" style="background:#EEEBED"><img src="img/combos/caja_12.jpg" alt="Caja con doce donas surtidas"></div>
+          <h3 class="card__title">Caja de 12</h3>
+          <p class="card__desc">12 donas clásicas surtidas<span class="cmb-save">Ahorras $49</span></p>
+          <div class="card__foot">
+            <p class="card__price">$299</p>
+            <button class="add-btn" data-name="Caja de 12" data-price="299" data-detail="12 donas clásicas surtidas" aria-label="Agregar Caja de 12"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+        <article class="card card--pink cmb-card">
+          <div class="card__media card__media--cover" style="background:#FFFFFF"><img src="img/combos/munchkins.jpg" alt="Caja de Munchkins"></div>
+          <h3 class="card__title">Box 20 Munchkins</h3>
+          <p class="card__desc">Glazed, chocolate, blueberry y espolvoreado</p>
+          <div class="card__foot">
+            <p class="card__price">$125</p>
+            <button class="add-btn" data-name="Box 20 Munchkins" data-price="125" data-detail="Glazed, chocolate, blueberry y espolvoreado" aria-label="Agregar Box 20 Munchkins"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== ¿PEDIDO PARA LA OFICINA? ========== -->
+    <section class="container">
+      <div class="office">
+        <div class="office__text">
+          <h2 class="office__title">¿Pedido para la oficina?</h2>
+          <p class="office__desc">Comparte un enlace, cada quien elige su bebida y tú recoges todo en un solo viaje.</p>
+        </div>
+        <div class="office__actions">
+          <button type="button" class="btn btn--orange btn--lg" id="pedido-grupal">Crear pedido grupal</button>
+          <button type="button" class="btn btn--outline-white btn--lg" id="programar" aria-expanded="false" aria-controls="programar-panel">Programar hora de recolección</button>
+          <form class="schedule" id="programar-panel" hidden>
+            <label for="hora">¿A qué hora pasas?</label>
+            <input type="time" id="hora" min="07:00" max="22:00" step="900" value="09:00" required>
+            <button type="submit" class="btn btn--orange btn--sm">Confirmar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CARRITO (igual en todas las pantallas, menos la landing) ========== -->
+    <section class="cart container" id="carrito" aria-labelledby="titulo-carrito">
+      <h2 class="title-xl cart__title" id="titulo-carrito">Carrito</h2>
+      <ul class="cart__list" id="cart-list"></ul>
+      <p class="cart__empty" id="cart-empty">Tu carrito está vacío. Agrega algo con el botón +.</p>
+      <div class="cart__summary" id="cart-summary" hidden>
+        <p class="cart__total">Total <strong id="cart-total">$0</strong></p>
+        <a href="index.html#ubicaciones" class="btn btn--orange btn--lg">Ordenar ahora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <h2 class="footer__title"><span class="solo-escritorio">Regístrate para conocer nuestras ofertas y nuevos productos.</span><span class="solo-movil">Promos y nuevos productos directo a tu correo</span></h2>
+
+        <form class="newsletter" id="newsletter" novalidate>
+          <label for="correo" class="sr-only">Correo electrónico</label>
+          <input id="correo" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+          <button type="submit" aria-label="Enviar correo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M21 3L3 10.5l7 2.5 2.5 7z"/><path d="M21 3L10 13"/></svg>
+          </button>
+          <p class="newsletter__msg" id="newsletter-msg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="footer__middle">
+        <p class="footer__text">Comparte tus momentos favoritos con<br>#DunkinContigo y sé parte de algo delicioso.</p>
+
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social__pin" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.3 2C6.8 2 4 5.9 4 9.2c0 2 .8 3.8 2.4 4.4.3.1.5 0 .6-.3l.2-1c.1-.3 0-.4-.2-.7-.5-.6-.8-1.3-.8-2.4 0-3.1 2.3-5.8 6-5.8 3.3 0 5.1 2 5.1 4.7 0 3.5-1.6 6.5-3.9 6.5-1.3 0-2.2-1-1.9-2.3.4-1.5 1.1-3.2 1.1-4.3 0-1-.5-1.8-1.6-1.8-1.3 0-2.3 1.3-2.3 3.1 0 1.1.4 1.9.4 1.9l-1.5 6.4c-.4 1.9-.1 4.2 0 4.4 0 .1.2.2.3.1.1-.2 1.6-2 2.1-3.8l.8-3.2c.4.8 1.6 1.5 2.9 1.5 3.8 0 6.4-3.5 6.4-8.1C20.2 5.4 17 2 12.3 2z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M16.6 3h-3.2v12.3a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.3a6 6 0 1 0 5.1 6V9a7.4 7.4 0 0 0 4.3 1.4V7.2a4.3 4.3 0 0 1-4.3-4.2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h3>Nosotros:</h3>
+          <ul>
+            <li><a href="#">Nuestra Historia</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>¿Necesitas ayuda?</h3>
+          <ul>
+            <li><a href="#">Mapa del sitio</a></li>
+            <li><a href="#">Contáctanos</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Privacidad</h3>
+          <ul>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--no-title">
+          <ul>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra fija con el resumen de la orden: se oculta al llegar al carrito -->
+  <a href="#carrito" class="cart-bar" id="cart-bar" hidden>
+    <span class="cart-bar__label">Tu orden</span>
+    <span class="cart-bar__count" id="cart-bar-count">0 artículos</span>
+    <strong class="cart-bar__total" id="cart-bar-total">$0</strong>
+    <span class="cart-bar__cta">Ver carrito</span>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="js/carrito.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/combos.js?v=3"></script>
+</body>
+</html>

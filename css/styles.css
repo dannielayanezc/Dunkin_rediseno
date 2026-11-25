@@ -738,6 +738,8 @@ button { font: inherit; }
 .cart-bar:hover .cart-bar__cta { filter: brightness(1.07); }
 body.has-cart-bar .toast { bottom: 108px; }
 
+.cart__empty p + p { margin-top: 6px; }
+
 /* Recuadro para fotos pendientes */
 .img-ph {
   display: flex;

@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
       { id: 'caramel-macchiato',  nombre: 'Caramel Macchiato',  desc: 'Espresso con leche cremosa y un delicioso toque de caramelo.', img: 'img/bebidas/caramel_macchiato.jpg' },
       { id: 'mocha',              nombre: 'Mocha',              desc: 'Bebida dulce y cremosa con espresso, leche y chocolate.',   img: 'img/bebidas/mocha.jpg' },
       { id: 'cappuccino',         nombre: 'Cappuccino',         desc: 'Espresso con leche vaporizada y espuma.',                   img: 'img/bebidas/cappuccino.jpg' },
-      { id: 'cafe-del-dia', nombre: 'Café del día', desc: 'Café de grano recién preparado, caliente y aromático.', img: 'img/bebidas/espresso_americano.jpg' },
       { id: 'cafe-americano',     nombre: 'Café Americano',     desc: 'Espresso combinado con agua caliente.',                     img: 'img/bebidas/cafe_americano.jpg' },
       { id: 'espresso-americano', nombre: 'Espresso Americano', desc: 'Café de sabor intenso y carácter tostado.',                 img: 'img/bebidas/espresso_americano.jpg' }
     ],

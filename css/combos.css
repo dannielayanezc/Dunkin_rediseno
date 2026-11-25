@@ -203,7 +203,8 @@
   .hero-combo .add-btn { width: 44px; height: 44px; }
 
   .cmb-section { padding-top: 16px; }
-  .cmb-section .conector__blanco { height: 60px; border-bottom-right-radius: 80px; }
+  .cmb-section:not(.cmb-section--pink) .conector__blanco { height: 60px; border-bottom-right-radius: 80px; }
+  .cmb-section--pink .conector__blanco { height: 60px; border-top-left-radius: 110px; }
   .cmb-section--pink { padding-top: 40px; }
   .cmb-head { gap: 10px; }
   .cmb-head .cmb-head__note { padding-left: 16px; }

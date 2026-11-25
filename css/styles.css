@@ -952,9 +952,9 @@ body.has-cart-bar .toast { bottom: 108px; }
    ========================================================= */
 @media (max-width: 900px) {
   /* Fondo café debajo del footer: el espacio extra se ve como parte del footer */
-  html { background: var(--brown); }
-  body { background: var(--white); }
-  .footer { padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px)); }
+  html, body { background: var(--brown); }   /* lo que queda debajo del footer es café */
+  .page { background: var(--white); }
+  .footer { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
 
   /* Hero: botones del mismo tamaño y en una sola línea */
   .hero { gap: 12px; padding: 40px 20px; }

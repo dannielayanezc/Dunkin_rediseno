@@ -204,7 +204,7 @@
 
   .cmb-section { padding-top: 16px; }
   .cmb-section:not(.cmb-section--pink) .conector__blanco { height: 60px; border-bottom-right-radius: 80px; }
-  .cmb-section--pink .conector__blanco { height: 60px; border-top-left-radius: 110px; }
+  .page--combos .cmb-section--pink .conector .conector__blanco { height: 60px; border-top-left-radius: 110px; border-bottom-right-radius: 0; }
   .cmb-section--pink { padding-top: 40px; }
   .cmb-head { gap: 10px; }
   .cmb-head .cmb-head__note { padding-left: 16px; }

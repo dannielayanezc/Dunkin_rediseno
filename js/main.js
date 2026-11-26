@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
      contain: true  → la foto tiene fondo blanco y se muestra completa */
   const productos = {
     bebidas: [
-      { nombre: 'Café del día',     desc: 'Frío, con leche y hielo',        precio: 75, img: 'img/cafe_land.jpg',   alt: 'Café helado' },
-      { nombre: 'Mango Refresher',  desc: 'Mango y piña con hielo\u00a0·\u00a0M',     precio: 69, img: 'img/rfrshr_land.jpg', alt: 'Mango Refresher con hielo' }
+      { nombre: 'Café del día',     desc: 'Frío, con leche y hielo',        precio: 75, img: 'img/landing/cafe_land.jpg',   alt: 'Café helado' },
+      { nombre: 'Mango Refresher',  desc: 'Mango y piña con hielo\u00a0·\u00a0M',     precio: 69, img: 'img/landing/rfrshr_land.jpg', alt: 'Mango Refresher con hielo' }
     ],
     donas: [
-      { nombre: 'Strawberry Rainbow', desc: 'Glaseado de fresa con chispas', precio: 29, img: 'img/dona_rainbow.jpg',   alt: 'Dona glaseada rosa con chispas de colores', contain: true },
+      { nombre: 'Strawberry Rainbow', desc: 'Glaseado de fresa con chispas', precio: 29, img: 'img/landing/dona_rainbow.jpg',   alt: 'Dona glaseada rosa con chispas de colores', contain: true },
       { nombre: 'Jelly Donut',        desc: 'Rellena de mermelada',          precio: 49, img: 'img/donas/jelly.jpg',    alt: 'Dona rellena de mermelada', contain: true }
     ],
     sandwiches: [
